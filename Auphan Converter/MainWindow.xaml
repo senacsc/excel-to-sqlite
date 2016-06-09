@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Auphan_Converter"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="Alphan Converter" Height="475.405" Width="525" ResizeMode="CanResizeWithGrip">
     <Grid>
-        
+
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,86,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="21"><Run Text="Planilha:"/><LineBreak/><Run/></TextBlock>
+        <ComboBox x:Name="SheetsComboBox" HorizontalAlignment="Left" Margin="10,106,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-1.006,-0.13"/>
+
+
+        <GroupBox x:Name="groupBox" Header="Selecionar Arquivo (.xls, .xlsx)" Margin="10,10,10,0" Height="66" VerticalAlignment="Top">
+            <StackPanel Orientation="Horizontal" Margin="10,13,12,8" UseLayoutRounding="False">
+                <TextBox x:Name="FileTextBox" HorizontalAlignment="Left" TextWrapping="Wrap" Width="362"/>
+                <Button x:Name="FileSelectButton" Content="Selecionar" Margin="5,0,0,0" Width="85" HorizontalContentAlignment="Center" UseLayoutRounding="False" Click="button_Click"/>
+            </StackPanel>
+        </GroupBox>
+        <ListView x:Name="MedicamentosListView" Margin="10,142,10,10">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="button" Content="Exportar para SQLite" Margin="0,106,10,0" VerticalAlignment="Top" Height="22" Click="button_Click_1" HorizontalAlignment="Right" Width="135"/>
+
+
+
     </Grid>
 </Window>
